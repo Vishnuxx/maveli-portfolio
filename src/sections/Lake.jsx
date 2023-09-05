@@ -1,8 +1,22 @@
+import { onMount } from "solid-js";
 import lakebg from "../assets/lake.jpg";
 import vallam from "../assets/Vallam21.png";
+import { parallaxer } from "../utils/parallaxer";
 
-function Lake({ id , ref }) {
-
+function Lake({ id , root }) {
+	let ref;
+	onMount(() => {
+		parallaxer(root, ref, ({ layer, yPos }) => {
+			switch (layer.id) {
+				case "text":
+					layer.style.transform = `translateX(${yPos}px)`;
+					break;
+				default:
+					layer.style.transform = `translateY(${-yPos}px)`;
+					break;
+			}
+		});
+	});
 	return (
 		<div
 			id={id}

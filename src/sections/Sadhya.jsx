@@ -1,8 +1,16 @@
 import room from "../assets/room2.png";
-import maveli2 from "../assets/maveli2.png"
+import maveli2 from "../assets/maveli2.png";
 import sadhya from "../assets/sadhya.png";
+import { onMount } from "solid-js";
+import { parallaxer } from "../utils/parallaxer";
 
-function Sadhya({ id , ref }) {
+function Sadhya({ id, root }) {
+	let ref;
+	onMount(() => {
+		parallaxer(root, ref, ({ layer, yPos }) => {
+			layer.style.transform = `translateY(${-yPos}px)`;
+		});
+	});
 	return (
 		<div
 			id={id}
@@ -33,12 +41,10 @@ function Sadhya({ id , ref }) {
 				data-speed="1.4"
 				class="parallax  absolute left-20  w-[30%] h-[40%] flex flex-auto justify-around items-center p-5 box-border"
 			>
-                
 				<h3 class=" left-0 text-start text-black font-black text-[4rem] md:text-[5rem]">
-					Sadhya
-                    Mukhyam
+					Sadhya Mukhyam
 				</h3>
-				
+
 				{/* <h2 class=" absolute right-0 text-center text-amber-950 font-black md:text-[2.1rem] text-[1.3rem]">
 					Mukhyam
 				</h2> */}

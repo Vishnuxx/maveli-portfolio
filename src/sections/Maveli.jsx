@@ -6,11 +6,14 @@ import layer1 from "../assets/flowers-layer1.png";
 import bananaleaves from "../assets/bananaleaves.png";
 import grass from "../assets/grass.png";
 import Particles from "./Particles";
+import { parallaxer } from "../utils/parallaxer";
 
-function Hero({ id , ref}) {
-
+function Maveli({ id, root }) {
+	let ref;
 	onMount(() => {
-		// setupParallax(ref);
+		parallaxer(root, ref, ({ layer, yPos }) => {
+			layer.style.transform = `translateY(${-yPos}px)`;
+		});
 	});
 
 	return (
@@ -157,4 +160,4 @@ function Hero({ id , ref}) {
 	);
 }
 
-export default Hero;
+export default Maveli;
