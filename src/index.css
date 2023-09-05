@@ -2,13 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+	height: 100%;
+	width: 100%;
 }
 
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: inherit;
+	width: inherit;
+	background-color: #000000;
+	overflow: hidden;
+}
 
+#root {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: #000;
+	image-rendering: optimizeSpeed;
+}
+
+.particle {
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #ffef5b;
+	box-shadow: 0px 0px 15px 2px #fff8cd;
+	border-radius: 50%;
+	pointer-events: none;
+	animation: blink 0.7s infinite alternate;
+}
+
+* {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+/* Hide the scrollbar for WebKit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+	width: 0.1rem; /* You can adjust the width to 0 or any other value as needed */
+}
+
+/* Hide the scrollbar thumb for WebKit-based browsers */
+::-webkit-scrollbar-thumb {
+	background-color: transparent;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}

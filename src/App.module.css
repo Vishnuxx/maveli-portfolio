@@ -1,3 +1,9 @@
 .App {
-  text-align: center;
+	text-align: center;
+	height: inherit;
+	width: inherit;
+  transform-origin: center;
+  /* overflow: hidden; */
+  
 }
+
