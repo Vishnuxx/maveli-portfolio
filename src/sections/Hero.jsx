@@ -3,6 +3,7 @@ import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
 import grass from "../assets/grass.png";
 import onamaal from '../assets/maveli3.png'
 import { parallaxer } from "../utils/parallaxer";
+import Navbar from "./NavBar";
 
 function Hero({ root }) {
 	let ref;
@@ -29,6 +30,11 @@ function Hero({ root }) {
 			id="der"
 			class="relative overflow-hidden h-full snap-start w-full bg-[#000000] text-[10rem] flex flex-col justify-center items-start"
 		>
+			<Navbar data={{
+				History : "/",
+				Onam : "/",
+				Service : "/"
+			}}></Navbar>
 			<div
 				id="colorbg"
 				data-speed="1"
@@ -54,9 +60,9 @@ function Hero({ root }) {
 					onClick={() =>
 						root.scrollTo({ y: window.innerHeight, behaviour: "smooth" })
 					}
-					class=" z-10 mt-10  border-2 border-green-400 text-white hover:bg-green-400 hover:scale-110 transition-transform hover:text-black w-fit h-fit px-20 py-2 text-[1.4rem] rounded-2xl"
+					class=" z-10 mt-10  border-2 border-green-400 text-white hover:bg-green-400 hover:scale-105 transition-transform hover:text-black w-fit h-fit px-20 py-2 text-[1.4rem] rounded-2xl"
 				>
-					Explore
+					Welcome
 				</button>
 			</div>
 			<div class="flex justify-center w-full pointer-events-none">

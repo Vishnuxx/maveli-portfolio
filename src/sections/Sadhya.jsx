@@ -41,7 +41,7 @@ function Sadhya({ id, root }) {
 				data-speed="1.4"
 				class="parallax  absolute left-20  w-[30%] h-[40%] flex flex-auto justify-around items-center p-5 box-border"
 			>
-				<h3 class=" left-0 text-start text-black font-black text-[4rem] md:text-[5rem]">
+				<h3 class=" left-0 text-start text-black font-black text-[6rem] md:text-[5rem]">
 					Sadhya Mukhyam
 				</h3>
 
