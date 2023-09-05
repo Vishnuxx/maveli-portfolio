@@ -8,7 +8,7 @@ function Navbar({ data = {} }) {
 					return (
 						<div class="p-6 cursor-pointer">
 							<a
-								href={data[key]?.url}
+								href={data[key]}
 								class="p-2  border-green-500 font-semibold text-[#909090] transition-all duration-100 hover:text-white rounded-sm hover:border-b-2"
 							>
 								{key}

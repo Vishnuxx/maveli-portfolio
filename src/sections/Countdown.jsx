@@ -45,7 +45,7 @@ function Countdown(props) {
 	return (
 		<div class=" flex flex-col space-x-2 h-fit w-fit justify-center text-bold text-white">
 			<p class="text-[3rem] w-full text-center p-10 font-bold text-amber-500">
-				Waiting for Onam 2024
+				Onam 2024 Loading...
 			</p>
 			<div class="flex flex-col  md:flex-row  ">
 				<div class="flex flex-col m-3  min-w-[200px]  justify-center items-center border-4 rounded-md p-5">

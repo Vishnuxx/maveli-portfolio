@@ -31,9 +31,8 @@ function Hero({ root }) {
 			class="relative overflow-hidden h-full snap-start w-full bg-[#000000] text-[10rem] flex flex-col justify-center items-start"
 		>
 			<Navbar data={{
-				History : "/",
-				Onam : "/",
-				Service : "/"
+				History : "/history",
+				Onam : "/onam",
 			}}></Navbar>
 			<div
 				id="colorbg"
@@ -53,14 +52,14 @@ function Hero({ root }) {
 						മലയാളികളുടെ സ്വന്തം
 					</p>
 					<p class=" w-fit  py-0 z-[1] font-black text-[5rem] md:text-[10rem]  text-amber-500 ">
-						MAAVELI
+						MAVELI
 					</p>
 				</div>
 				<button
 					onClick={() =>
 						root.scrollTo({ y: window.innerHeight, behaviour: "smooth" })
 					}
-					class=" z-10 mt-10  border-2 border-green-400 text-white hover:bg-green-400 hover:scale-105 transition-transform hover:text-black w-fit h-fit px-20 py-2 text-[1.4rem] rounded-2xl"
+					class=" z-10 mt-5  border-2 border-green-400 text-white hover:bg-green-400 hover:scale-105 transition-transform hover:text-black w-fit h-fit px-20 py-2 text-[1.4rem] rounded-2xl"
 				>
 					Welcome
 				</button>

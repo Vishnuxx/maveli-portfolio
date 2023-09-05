@@ -25,10 +25,7 @@ function App() {
 			>
 				<Countdown></Countdown>
 			</div>
-			<div
-				id="section2"
-				class="h-full w-full bg-[#ffffff] p-10  flex flex-col justify-center items-center"
-			></div>
+			
 		</div>
 	);
 }
