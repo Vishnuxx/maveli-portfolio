@@ -4,6 +4,7 @@ import Sadhya from "./sections/Sadhya";
 import Lake from "./sections/Lake";
 import AdaarSadhya from "./sections/AdaarSadhya";
 import Hero from "./sections/Hero";
+import Countdown from "./sections/Countdown";
 
 function App() {
 	let root;
@@ -21,7 +22,9 @@ function App() {
 			<div
 				id="section"
 				class="snap-start h-full w-full bg-[#071607] p-10  flex flex-col justify-center items-center"
-			></div>
+			>
+				<Countdown></Countdown>
+			</div>
 			<div
 				id="section2"
 				class="h-full w-full bg-[#ffffff] p-10  flex flex-col justify-center items-center"
