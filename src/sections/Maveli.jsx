@@ -12,7 +12,7 @@ function Maveli({ id, root }) {
 	let ref;
 	onMount(() => {
 		parallaxer(root, ref, ({ layer, yPos }) => {
-			layer.style.transform = `translateY(${-yPos}px)`;
+			layer.style.transform = `translateY(${-yPos.toFixed(2)}px)`;
 		});
 	});
 
@@ -20,25 +20,27 @@ function Maveli({ id, root }) {
 		<div
 			id={id}
 			ref={ref}
-			class="bg-[#0a1206] snap-start w-screen h-screen relative overflow-hidden"
+			class="bg-[#0a1206] snap-start w-screen h-full relative overflow-hidden"
 		>
 			<img
 				data-speed="1.5"
 				id="bg"
 				src={bg}
 				alt="bg"
-				class="parallax absolute bottom-0 h-[140%]  w-[140%] object-cover"
+				loading="lazy"
+				class="parallax absolute bottom-0 h-[130%]  w-[130%] object-cover"
 			/>
 			<img
 				data-speed="1.4"
 				id="leaves"
+				loading="lazy"
 				src={bananaleaves}
 				alt="leaves"
 				class="parallax absolute -left-20 md:-left-0 md:top-0 top-[200px]   h-[50%] w-fit object-cover  brightness-[0.2]"
 			/>
 			<div
-				data-speed="1.3"
-				class="parallax absolute w-full h-[40%] flex flex-col justify-center items-center p-5 box-border"
+		
+				class=" absolute w-full h-[40%] flex flex-col justify-center items-center p-5 box-border"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -97,17 +99,17 @@ function Maveli({ id, root }) {
 								result="hardAlpha"
 							/>
 							<feOffset dy="20" />
-							<feGaussianBlur stdDeviation="12" />
+							{/* <feGaussianBlur stdDeviation="12" /> */}
 							<feComposite in2="hardAlpha" operator="out" />
 							<feColorMatrix
 								type="matrix"
 								values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
 							/>
-							<feBlend
+							{/* <feBlend
 								mode="normal"
 								in2="BackgroundImageFix"
 								result="effect1_dropShadow_30_45"
-							/>
+							/> */}
 							<feBlend
 								mode="normal"
 								in="SourceGraphic"
@@ -128,25 +130,27 @@ function Maveli({ id, root }) {
 			<img
 				data-speed="1.2"
 				id="maveli"
+				loading="lazy"
 				src={maveli}
 				alt="maveli"
 				class="parallax absolute -bottom-10  min-w-[400px]  h-[80%] w-[90%] object-cover"
 			/>
-			<Particles
+			{/* <Particles
 				data-speed="1.1"
 				class="parallax h-screen w-screen top-0 absolute"
-			></Particles>
+			></Particles> */}
 
 			<img
 				data-speed="0.95"
 				id="flowers"
 				src={layer1}
 				alt="flowers"
-				class="parallax absolute -bottom-[100px] object-cover"
+				class="parallax  absolute -bottom-[100px] object-cover"
 			/>
 
 			<img
 				data-speed="-0.6"
+				loading="lazy"
 				id="grass"
 				src={grass}
 				alt="grass"

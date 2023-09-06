@@ -14,13 +14,7 @@ function Hero({ root }) {
 			if (layer.id == "colorbg") {
 				layer.style.background = `rgb(255, 245, 182, ${-scrollY / 500})`;
 			} else if (layer.id == "grass") {
-				// layer.style.filter = `brightness(${-scrollY/1000})`
 				layer.style.transform = `translateY(${-yPos / 4}px)`;
-				// layer.style.transform = `scale(${Math.min(-(yPos / 20) + 1, 100)} )`;
-				// console.log(`${-yPos}`);
-				// layer.style.textShadow = `rgba(255 , 185 , ${
-				// 	scrollY / 100
-				// } , 1) 0px 0px 20px`;
 			}
 		});
 	});
