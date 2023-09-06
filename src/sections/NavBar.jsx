@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { For } from "solid-js";
 
 function Navbar({ data = {} }) {
@@ -7,12 +8,12 @@ function Navbar({ data = {} }) {
 				{(key, index) => {
 					return (
 						<div class="p-6 cursor-pointer">
-							<a
+							<A
 								href={data[key]}
 								class="p-2  border-green-500 font-semibold text-[#909090] transition-all duration-100 hover:text-white rounded-sm hover:border-b-2"
 							>
 								{key}
-							</a>
+							</A>
 						</div>
 					);
 				}}
